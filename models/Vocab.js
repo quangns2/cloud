@@ -6,7 +6,7 @@ const vocabSchema = new mongoose.Schema({
   word: { type: String, required: true },
   meaning: { type: String, required: true },
   example: { type: String }
-});
+},{collation: "vocabs"});
 
 // Export mô hình Vocab
-module.exports = mongoose.model('Vocab', vocabSchema);
+module.exports = mongoose.model('vocabs', vocabSchema);
